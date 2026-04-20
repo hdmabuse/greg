@@ -1,0 +1,10 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+RUN pip install --no-cache-dir mcp-brasil fastmcp httpx
+
+RUN useradd -m -u 1000 appuser && chown appuser:appuser /app
+USER appuser
+
+CMD ["fastmcp", "run", "mcp_brasil.server:mcp", "--transport", "http", "--host", "0.0.0.0", "--port", "8001"]
