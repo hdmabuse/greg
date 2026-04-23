@@ -1,0 +1,33 @@
+# Python
+venv/
+venv-mcp/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+
+# Node
+node_modules/
+dist/
+.cache/
+
+# Banco de dados local
+*.db
+*.sqlite3
+
+# Ambiente
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
